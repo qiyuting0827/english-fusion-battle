@@ -1215,7 +1215,7 @@ straw|ber|ry \u8349\u8393`]],Ze=class{constructor(t){this.g=t,this.root=document
   e.append(tabs);
 
   let box=M("div","tbbuilder");
-  box.append(M("div","tbbtitle","自选单词范围"),M("div","tbbhint","可以跨单元；从第几个词到第几个词，超过 10 个词会自动分成连续关卡，每关 10 个词。"));
+  box.append(M("div","tbbtitle","自选单词范围"),M("div","tbbhint","可以跨单元；从第几个词到第几个词。所选范围会先整体打乱，再每 10 个词分成一关。"));
   let row=M("div","tbrow");
   let fu=M("select","tbsel"),fw=M("select","tbsel"),tu=M("select","tbsel"),tw=M("select","tbsel");
   units.forEach((u,ui)=>{let o=M("option","",u.u);o.value=ui;fu.append(o);let p=M("option","",u.u);p.value=ui;tu.append(p)});
@@ -1254,7 +1254,7 @@ straw|ber|ry \u8349\u8393`]],Ze=class{constructor(t){this.g=t,this.root=document
   });
   if(!grid.children.length)grid.append(M("div","tbempty","这个册暂时没有词条。"));
   e.append(grid);
-  e.append(M("div","tbfoot","48 个单元、2161 个词条全部收录。可跨单元自选起止词；每 10 个词一关，单词顺序随机，同一范围重复挑战会保留星星。"));
+  e.append(M("div","tbfoot","48 个单元、2161 个词条全部收录。可跨单元自选起止词；整个范围随机打乱后每 10 个词一关，同一范围重复挑战会保留星星。"));
   this.show("textbook")
 }
 showTbIntro(t){
